@@ -4,16 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Estilo Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Estilo Propio -->
     <link rel="stylesheet" href="../estilo/style.css" />
     <title>preEntrega2</title>
   </head>
   <body>
     <header>
-      <h1>fuera De La Caja</h1>
+      <h1 class="wow animate__animated animate__slideInLeft">
+        fuera De La Caja
+      </h1>
       <nav>
         <ul class="menu">
           <li class="item"><a href="../index.html">Inicio</a></li>
-          <li class="item"><a href="./Nosotros.html">Nosotros</a></li>
+
           <li class="item">
             <a href="./gallery.html">Galería</a>
             <ul class="submenu">
@@ -28,36 +43,31 @@
               </li>
             </ul>
           </li>
+          <li class="item"><a href="./Nosotros.html">Nosotros</a></li>
           <li class="item"><a href="./Contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
+      <section class="nosotros">
         <div class="box1">
-          <h2>Creador</h2>
-          <img
-            class="sintransparencia"
-            src="../estilo/img/onTheRoad.png"
-            alt=""
-          />
-
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit est
-            eum sapiente cumque provident inventore consectetur mollitia,
-            perspiciatis quas debitis dolore velit voluptates iusto quasi quis
-            dolores dolorum vitae tempore! Ducimus in, quod inventore dolor
-            praesentium accusantium ab provident repudiandae dolorum impedit
-            repellat quam quas, architecto perspiciatis quo! Repudiandae fugit
-            deleniti dolorem fugiat? Ipsum laboriosam nihil voluptas illo
-            pariatur a! Vel autem adipisci laborum voluptatem quam rerum nobis
-            accusamus, illo tempore expedita minus corporis non totam quibusdam
-            eos labore obcaecati. Sit rem, illo corrupti alias provident id
-            minus placeat soluta! Est dolores enim earum officia eligendi
-            debitis atque deserunt doloribus ipsam? Quibusdam aut soluta
-            nesciunt vitae incidunt eaque beatae exercitationem vel, aliquam
-            ipsam unde itaque quas, modi accusantium error ea.
-          </p>
+          <h2>Developer</h2>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3>Hola, soy Fede</h3>
+                <h3>
+                  Estudio programación y abogacía. Tengo 10 materias aprobadas
+                  en la UBA y un curso de JS. <br />Actualmente estoy haciendo
+                  un curso de Py y de Desarrollo Web, además de un posgrado en
+                  Inteligencia Artificial.
+                </h3>
+                <h3>Es nosotros porque nada de esto se hace solo.</h3>
+                <p></p>
+              </div>
+              <div class="col"><img src="../estilo/img/yo.jpg" alt="" /></div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -69,5 +79,14 @@
       </section>
       <p>Copyright 2023</p>
     </footer>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

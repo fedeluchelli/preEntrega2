@@ -19,11 +19,11 @@ body {
   grid-template-areas:
     "header header"
     "box1 publicidad"
-    "box1 publicidad"
-    "box1 publicidad"
-    "footer footer";
-  grid-template-rows: 1fr 1fr 1fr 1fr 50px;
+    "box2 publicidad"
+    "box3 publicidad"
+    "foot foot";
   grid-template-columns: auto 15%;
+  grid-template-rows: 1fr 1fr 1fr 1fr auto;
   row-gap: 10px;
   column-gap: 10px;
   height: 100vh;
@@ -32,7 +32,6 @@ body {
 
 header {
   grid-area: header;
-  font-family: "Michroma";
 }
 h1 {
   color: rgba(255, 255, 255);
@@ -40,6 +39,7 @@ h1 {
   font-family: "abstract";
   font-size: 2.5rem;
   text-align: left;
+  line-height: 90px;
 }
 
 /*    Comienza el navegador    */
@@ -95,7 +95,7 @@ nav {
 
 /*    Comienza el contenido principal   */
 
-section .box1 {
+.box1 {
   grid-area: box1;
   background: -webkit-repeating-linear-gradient(
     rgb(35 35 35),
@@ -108,6 +108,12 @@ section .box1 {
   line-height: 30px;
   font-size: 25px;
 }
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
 .box1 p {
   font-size: 25px;
   width: 96%;
@@ -119,12 +125,12 @@ section .box1 {
   padding: 20px;
 }
 .box1 h2 {
-  text-decoration: underline;
-  font-size: 50px;
+  font-size: 70px;
+  font-weight: bold;
   margin-bottom: 40px;
   padding: 20px;
   text-align: center;
-  color: #47ee7f;
+  color: #ffffff;
 }
 .box1 h3 {
   font-size: 40px;
@@ -133,7 +139,7 @@ section .box1 {
   background-color: rgb(35, 35, 35);
 }
 
-/*    Comienza el aside    */
+/*    INDEX  ASIDE   */
 aside {
   grid-area: publicidad;
   background: white;
@@ -168,7 +174,7 @@ aside img {
   }
 }
 
-/*    Comienza la caja flotante    */
+/*    INDEX _ CAJA FLOTANTE    */
 .fija {
   font-family: Arial;
   background-color: whitesmoke;
@@ -193,9 +199,9 @@ aside img {
   transition: 0.3s ease;
 }
 
-/*    Comienza el footer     */
+/*    INDEX FOOTER    */
 footer {
-  grid-area: footer;
+  grid-area: foot;
   background-color: rgb(35, 35, 35);
   display: flex;
   justify-content: space-between;
@@ -213,4 +219,193 @@ footer a {
 }
 footer a:hover {
   color: #47ee7f;
+}
+
+/* DISPOSICIÓN R&R , IA , LONG */
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "header"
+    "cards"
+    "foot";
+}
+.info__head {
+  grid-area: header;
+}
+.info__centro {
+  grid-area: cards;
+}
+.info__foot {
+  grid-area: foot;
+}
+
+/*    DISPOSICIÓN CONTACTO */
+.comunicate {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "head"
+    "card"
+    "foot";
+}
+.comunicate__head {
+  grid-area: head;
+}
+.comunicate__card {
+  grid-area: card;
+}
+.comunicate__card a {
+  text-decoration: none;
+}
+.comunicate__card h3 {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgba(240, 255, 255, 0.144);
+  width: 60%;
+  margin-left: 100px;
+  padding: 10px;
+}
+.comunicate__card img {
+  width: 80px;
+  height: 80px;
+}
+.comunicate__foot {
+  grid-area: foot;
+}
+
+/*     NOSOTROS     */
+.row {
+  background-color: #efefef51;
+  border-radius: 50px;
+}
+.nosotros h3 {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgba(240, 255, 255, 0);
+  text-align: left;
+  font-size: 30px;
+  margin: 25px;
+}
+.nosotros img {
+  height: 600px;
+  width: 450px;
+  border-radius: 50px;
+}
+
+/*    DISPOSICIÓN GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "header"
+    "cards"
+    "foot";
+}
+
+.gallery__header {
+  grid-area: header;
+}
+.gallery__centro {
+  grid-area: cards;
+}
+.gallery__foot {
+  grid-area: foot;
+}
+
+/*    TARJETAS DE GALLERY    */
+.cards {
+  display: grid;
+  grid-template-areas: "A B C";
+  grid-template-rows: 1, 1fr;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-items: center;
+  column-gap: 40px;
+  height: 80vh;
+}
+.cards a {
+  text-decoration: none;
+}
+.cardA {
+  grid-area: A;
+  background-color: #47ee7f;
+}
+.cardB {
+  grid-area: B;
+  background-color: #47ee7f;
+}
+.cardC {
+  grid-area: C;
+  background-color: #47ee7f;
+}
+.cards img {
+  width: 300px;
+  height: 300px;
+  opacity: 0.4;
+  transition: 0.3s ease;
+}
+.cards img:hover {
+  opacity: 1;
+}
+
+/*    DISEÑO MOBILE     */
+@media screen and (max-width: 800px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "header "
+      "publicidad "
+      "box1 "
+      "box2 "
+      "box3 "
+      "foot ";
+  }
+  aside {
+    grid-area: publicidad;
+    display: none;
+  }
+  .fija {
+    display: none;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "header"
+      "cards"
+      "foot";
+  }
+  .cards {
+    display: grid;
+    height: auto;
+    gap: 20px;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "A"
+      "B"
+      "C";
+  }
+  .cards img {
+    opacity: 1;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "header"
+      "cards"
+      "foot";
+  }
 }
