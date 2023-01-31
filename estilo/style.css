@@ -19,9 +19,10 @@ body {
   grid-template-areas:
     "header header"
     "box1 publicidad"
-    "box2 publicidad"
+    "box1 publicidad"
+    "box1 publicidad"
     "footer footer";
-  grid-template-rows: 1fr 1fr 1fr 50px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 50px;
   grid-template-columns: auto 15%;
   row-gap: 10px;
   column-gap: 10px;
@@ -155,8 +156,8 @@ aside img {
   transform: rotate(300deg);
   animation-name: rotacion;
   animation-iteration-count: infinite;
-  animation-timing-function: ease;
-  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  animation-duration: 8s;
 }
 @keyframes rotacion {
   0% {
@@ -174,7 +175,7 @@ aside img {
   border: solid 1px black;
   padding: 5px;
   display: inline-block;
-  font-size: 34px;
+  font-size: 24px;
   width: 90px;
   height: 90px;
   position: fixed;
